@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+
+.slider {
+  margin: auto;
+  overflow: hidden;
+  width: calc(25% * 4);
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 50s linear infinite;
+  width: calc(25% * 4); /* Adjust based on the number of testimonials */
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100%));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100%));
+  }
+}
